@@ -1,3 +1,4 @@
+let slides = document.querySelectorAll('.recipe-divider');
 let typewriter = new Typewriter('#recipe-typewriter', {
   autoStart: true,
   loop: false,
