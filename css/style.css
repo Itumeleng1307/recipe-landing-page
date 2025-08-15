@@ -8,8 +8,19 @@ body {
     height: 100%;
     color: white;
 }
- .top-nav .logo {
-    height: 50px;
+
+.top-nav .logo {
+    height: 80px;
+ }
+
+ .top-nav ul li a {
+    text-decoration: none;
+    color: white;
+ }
+
+ .top-nav ul li a:hover {
+     background-color: white;
+     color: black;
  }
 
 .top-nav {
