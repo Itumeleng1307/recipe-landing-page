@@ -12,3 +12,4 @@ typewriter
   .pauseFor(500)
   .typeString("<br>Authentic South African flame culture, served hot.")
   .start();
+  let tips = [
