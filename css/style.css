@@ -1,3 +1,4 @@
+body {
 .recipe-content {
     font-family: "Rubik", sans-serif;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/media/braai.jpg");
