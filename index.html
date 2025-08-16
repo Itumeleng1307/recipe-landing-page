@@ -10,12 +10,506 @@
         href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
         <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-    <link rel="stylesheet" href="/css/style.css">
+        <style>
+            body {
+    background-color: black;
+}
+
+.recipe-content {
+    font-family: "Rubik", sans-serif;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/172/326/original/braai.jpg?1755328849");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+.top-nav .logo {
+    height: 80px;
+ }
+
+ .top-nav ul li a {
+    text-decoration: none;
+    color: white;
+ }
+
+ .top-nav ul li a:hover {
+     background-color: white;
+     color: black;
+ }
+
+.top-nav {
+    align-items: center;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px ;
+    font-family: "Rubik", sans-serif;
+    font-size: 15px;
+}
+
+.top-nav ul {
+align-items: center;
+list-style: none;
+gap: 80px;
+margin: 0;
+padding: 0;
+display: flex;
+}
+
+.top-nav ul li {
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.top-nav ul li:hover {
+        background-color: white;
+        color: black;
+        cursor: pointer; 
+}
+
+.sign-in-btn {
+    background-color: #e7db70;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 6px;
+}
+
+.sign-in-btn:hover {
+    background-color: #645f31;
+    color: white;
+}
+
+.intro-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: auto;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.intro {
+    flex: 1 1 400px;
+    padding-right: 40px;
+}
+
+.intro h1 {
+    font-size: 48px;
+    font-family: "Rubik", sans-serif;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 18px;
+    color: #ccc;
+    font-family: "Rubik", sans-serif;
+}
+
+.image-container {
+    position: relative;
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-image {
+    width: 300px;
+    height: 400px;
+    border-radius: 600px;
+    background-size: cover;
+    border: none;
+}
+
+.small-image-1,
+.small-image-2 {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+}
+
+.small-image-1 {
+     top: -20px;
+     bottom: -20px;
+     right: 100px;
+ }
+
+.small-image-2 {
+     bottom: -20px;
+     left: 100px;
+ }
+
+@media (max-width: 768px) {
+       .intro-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+       }
+
+       .intro h1 {
+           font-size: 36px;
+       }
+
+       .main-image {
+           width: 220px;
+           height: 220px;
+       }
+
+       .small-image {
+           width: 60px;
+           height: 60px;
+       }
+   }
+
+.get-recipe {
+    font-family: "Rubik", sans-serif;
+    display: inline-block;
+    margin: 10px 20px;
+    margin-top: -10px;
+    padding: 12px 24px;
+    background-color: #cb9c19;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 18px;
+    animation: bounce 2s infinite;
+    }
+    
+    @keyframes bounce {
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+    
+        50% {
+            transform: translateY(5px);
+        }
+}
+
+.get-recipe:hover{
+background-color: #645f31;
+color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.top-nav-2 .logo {
+    height: 80px;
+}
+
+.top-nav-2 ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.top-nav-2 ul li a:hover {
+    background-color: white;
+    color: black;
+}
+
+.top-nav-2 {
+    align-items: center;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    font-family: "Rubik", sans-serif;
+    font-size: 15px;
+}
+
+.top-nav-2 ul {
+    align-items: center;
+    list-style: none;
+    gap: 80px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.top-nav-2 ul li {
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.top-nav-2 ul li:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+.sign-in-btn {
+    background-color: #e7db70;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 6px;
+}
+
+.sign-in-btn:hover {
+    background-color: #645f31;
+    color: white;
+}
+
+.intro-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: auto;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+#start-recipe {
+    scroll-margin-top: 80px;
+}
+
+.recipe {
+    font-family: "Rubik", sans-serif;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/172/327/original/background.jpg?1755328934");
+    color: white;
+    padding: 60px 20px;
+    background-size: cover;
+    background-position: center;
+}
+
+.recipe-layout {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* left side */
+.recipe-image  {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;   
+    flex: 1;
+}
+
+.recipe-heading {
+    font-size: 58px;
+    margin-bottom: 40px;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.recipe-image img {
+    width: 280px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 200px;
+    border: 6px solid rgb(187, 157, 157);
+    box-shadow: 0 5px 20px rgba(209, 8, 8, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;   
+}
+
+.recipe-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(255, 100, 0, 0.6);
+}
+
+
+/* == Right Side Slides == */
+@keyframes flicker {
+    0%,
+    100% {
+        opacity: 0.95;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+}
+
+.recipe-dividers {
+    text-align: left;
+    position: relative;
+    flex: 2;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.recipe-divider {
+    font-family: "Rubik", sans-serif;
+    position: absolute;
+    opacity: 0;
+    margin-top: 100px;
+    left: 0;
+    width:  100%;
+    visibility: hidden;
+    transform: translateY(30px);
+    transition: all 0.5s ease;
+    background-color: rgba(196, 191, 191, 0.255);
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+.recipe-divider.active {
+    font-family: "Rubik", sans-serif;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    z-index: 2;
+    animation: slideFadeIn 0.6s ease-out forwards;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 165, 0, 0.2);
+}
+
+/* == Next Button == */
+.nextBtn {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    margin-top: 20px;
+    background-color: #b99210;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 3;
+}
+
+.nextBtn:hover {
+    background-color: #a8830d;
+    box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+    }
+
+.back-btn {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    background: #b99210;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 1000;
+}
+
+.shisa-nyama-tips-flip {
+    margin-top: 10px ;
+    padding: 30px 10px;
+    text-align: center;
+    background-color: rgba(91, 61, 61, 0.255);
+    color: #f5f5f5;
+    border-radius: 6px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.flip-card {
+    background: transparent;
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+    margin: 20px auto;
+    cursor: pointer;
+}
+
+.flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card.flipped .flip-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 5px 20px rgba(200, 123, 15, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.355);
+}
+
+.flip-front {
+    z-index: 2;
+}
+
+.flip-back {
+    transform: rotateY(180deg);
+}
+
+.tip-button {
+    background-color: #dfc266;
+    color: #fff;
+    font-size: 1rem;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Rubik', sans-serif;
+    box-shadow: 0 4px 15px rgba(255, 100, 0, 0.4);
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+.tip-button:hover {
+    background-color: #c3a539;
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 140, 0, 0.6);
+}
+
+/* 🔥 Flame Pulse Animation */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 100, 0, 0.6);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 150, 0, 0.9);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(255, 100, 0, 0.6);
+    }
+}
+
+footer{
+    text-align: center;
+    color: white;
+}
+        </style>
 </head>
 <body>
     <div class="recipe-content">
         <div class="top-nav">
-        <img src="/media/logo.jpg" class="logo" alt="Logo">
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/172/328/original/logo.jpg?1755328978" class="logo" alt="Logo">
         <!-- Top Navigation -->  
     <ul>
         <li>Home</li>
@@ -33,9 +527,9 @@
     <p id="recipe-typewriter"></p>
     </div>
     <div class="image-container">
-        <img src="media/dining.jpg" alt="Shisa Nyama" class="main-image">
-        <img src="media/braai-1.jpg" alt="Braai Meat" class="small-image-1">
-        <img src="media/chakalaka.jpg" alt="Braai" class="small-image-2">
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/172/323/original/dining.jpg?1755328147" alt="Shisa Nyama" class="main-image">
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/172/324/original/braai-1.jpg?1755328550" alt="Braai Meat" class="small-image-1">
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/172/325/original/chakalaka.jpg?1755328691" alt="Chakalaka" class="small-image-2">
     </div>
     </section>
 <!-- Recipe Button -->
@@ -44,7 +538,7 @@
 <!-- Recipe & image -->
 <section class="recipe" id="start-recipe">
             <div class="top-nav-2">
-                <img src="/media/logo.jpg" class="logo" alt="Logo">
+                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/172/328/original/logo.jpg?1755328978" class="logo" alt="Logo">
                 <!-- Top Navigation -->
                 <ul>
                     <li>Home</li>
@@ -59,7 +553,7 @@
         <!-- left side -->
         <div class="recipe-image">
     <h2 class="recipe-heading">Recipe</h2>
-    <img src="media/meat.jpeg" alt="Shisa Nyama">
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/172/329/original/meat.jpeg?1755329041" alt="Shisa Nyama">
     </div>  
     <!-- right side -->
 <div class="recipe-dividers">
@@ -136,6 +630,75 @@
 <footer> 🔥This sizzling project was coded by <strong>Itumeleng Mbangi</strong>
 </footer>
 
-    <script src="/js/script.js"></script>
+    <script>
+        let slides = document.querySelectorAll('.recipe-divider');
+            let nextBtn = document.getElementById('nextBtn');
+            let currentSlide = 0;
+
+            nextBtn.addEventListener('click', () => {
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].classList.add('active');
+            });
+
+            let typewriter = new Typewriter('#recipe-typewriter', {
+                autoStart: true,
+                loop: false,
+                delay: 20,
+            });
+
+            typewriter
+                .typeString("Where Smoke Meets Flavour. It's more than a meal, it's a vibe!")
+                .pauseFor(500)
+                .typeString("<br>Grilled meats, spicy sides, and good times shared around the fire.")
+                .pauseFor(500)
+                .typeString("<br>Authentic South African flame culture, served hot.")
+                .start();
+
+
+            let tips = [
+                "🔥 Flip meat only once to keep it juicy.",
+                "🪵 Add soaked wood chips for smoky flavour.",
+                "⏱️ Let meat rest after cooking — don’t skip it.",
+                "🧂 Salt just before grilling to avoid drying it out.",
+                "🍽️ Clean the grill while it’s still warm.",
+                "🥩 Room temp meat cooks more evenly.",
+                "🔥 Don’t overload the braai — give meat space!"
+            ];
+
+            let currentTipIndex = -1;
+
+            function getRandomTip(excludeIndex) {
+                let index;
+                do {
+                    index = Math.floor(Math.random() * tips.length);
+                } while (index === excludeIndex);
+                return [tips[index], index];
+            }
+
+            function showRandomTips() {
+                let [tip1, index1] = getRandomTip(currentTipIndex);
+                let [tip2, index2] = getRandomTip(index1);
+
+                currentTipIndex = index2;
+
+                document.getElementById("tipFront").textContent = tip1;
+                document.getElementById("tipBack").textContent = tip2;
+
+                // Flip the card every time you get new tips
+                flipCard();
+            }
+
+            function flipCard() {
+                let card = document.querySelector(".flip-card");
+                card.classList.toggle("flipped");
+            }
+
+            // Show first tip pair on page load
+            showRandomTips();
+
+        
+
+    </script>
 </body> 
 </html>
